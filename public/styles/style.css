@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Varela Round", sans-serif;
+}
+
+.header {
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header {
+    justify-content: flex-start;
+  }
+}
+.header .logo__header {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .header .logo__header {
+    display: none;
+  }
+}
+.header .logo__header .img__logo {
+  margin: 1rem;
+  width: 3rem;
+}
+.header .logo__header .titulo__logo {
+  text-align: center;
+  margin: 1rem;
+}
+.header .nav__header {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+.header .nav__header .img__nav {
+  display: none;
+  width: 3rem;
+  align-self: center;
+}
+.header .nav__header .img__nav:hover {
+  transform: scale(1.3);
+  transition-duration: 1s;
+}
+@media (max-width: 768px) {
+  .header .nav__header .img__nav {
+    margin: 0.5rem 0rem 0.5rem 2rem;
+    display: flex;
+    align-self: flex-start;
+  }
+}
+.header .nav__header:hover .lista__nav {
+  display: flex;
+}
+.header .nav__header .lista__nav {
+  font-size: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .header .nav__header .lista__nav {
+    display: none;
+    margin-left: 0;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+.header .nav__header .lista__nav .item__lista {
+  position: relative;
+  list-style: none;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+}
+.header .nav__header .lista__nav .item__lista:hover {
+  background-color: black;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.header .nav__header .lista__nav .item__lista:hover .enlace__item {
+  color: blanchedalmond;
+}
+.header .nav__header .lista__nav .item__lista .enlace__item {
+  text-decoration: none;
+}
+
+.container {
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100vh;
+  background-color: blanchedalmond;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer .titulo__footer {
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.home .img__home {
+  width: 70vw;
+}
+
+.formulario-login {
+  position: relative;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.formulario-login .login__formulario {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.5rem 0.5rem 2rem blanchedalmond;
+  border-radius: 2rem;
+}
+.formulario-login .login__formulario .titulo__login {
+  margin: 1rem;
+  font-size: 5rem;
+}
+.formulario-login .login__formulario .controles__login {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+}
+.formulario-login .login__formulario .controles__login .img__controles {
+  width: 40%;
+  align-self: center;
+  margin: 1rem;
+}
+@media (max-width: 768px) {
+  .formulario-login .login__formulario .controles__login .img__controles {
+    width: 70%;
+  }
+}
+.formulario-login .login__formulario .controles__login .email__controles, .formulario-login .login__formulario .controles__login .password__controles {
+  align-self: center;
+  width: 70%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0;
+  box-shadow: 0.1rem 0.1rem 1rem black;
+}
+.formulario-login .login__formulario .controles__login .email__controles:focus, .formulario-login .login__formulario .controles__login .password__controles:focus {
+  box-shadow: 0.5rem 0.5rem 5rem blanchedalmond;
+}
+.formulario-login .login__formulario .controles__login .btn__controles {
+  cursor: pointer;
+  margin: 1rem;
+  padding: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  background-color: blanchedalmond;
+  color: lightslategrey;
+  font-size: 1.6rem;
+  box-shadow: 0.5rem 0.5rem 2rem gray;
+}
+.formulario-login .login__formulario .controles__login .btn__controles:hover {
+  background-color: black;
+  color: blanchedalmond;
+  box-shadow: 0.5rem 0.5rem 2rem blanchedalmond;
+}
+.formulario-login .login__formulario .controles__login .btn__controles:active {
+  transform: scale(0.9);
+}
+.formulario-login .login__formulario .controles__login .label__controles {
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+.formulario-login .login__formulario .controles__login .btn__controles-alta {
+  background-color: rgba(61, 174, 48, 0.568);
+  color: black;
+  text-decoration: none;
+}
+.formulario-login .login__formulario .controles__login .btn__controles-alta:hover {
+  background-color: whitesmoke;
+  color: rgba(61, 174, 48, 0.568);
+  box-shadow: 0.5rem 0.5rem 2rem black;
+}
+@media (max-width: 768px) {
+  .formulario-login {
+    top: 1vh;
+    margin: 1rem;
+  }
+}
+
+.formulario-registrar {
+  position: relative;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.formulario-registrar .registrar__formulario {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.5rem 0.5rem 2rem blanchedalmond;
+  border-radius: 2rem;
+}
+.formulario-registrar .registrar__formulario .titulo__registrar {
+  margin: 1rem;
+  font-size: 5rem;
+}
+.formulario-registrar .registrar__formulario .controles__registrar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .img__controles {
+  width: 40%;
+  align-self: center;
+  margin: 1rem;
+}
+@media (max-width: 768px) {
+  .formulario-registrar .registrar__formulario .controles__registrar .img__controles {
+    width: 70%;
+  }
+}
+.formulario-registrar .registrar__formulario .controles__registrar .input__controles {
+  align-self: center;
+  width: 80%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0;
+  box-shadow: 0.1rem 0.1rem 1rem black;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .input__controles:focus {
+  box-shadow: 0.5rem 0.5rem 5rem blanchedalmond;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .input__fechaNacimiento {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .btn__controles {
+  cursor: pointer;
+  width: 90%;
+  margin: 1rem;
+  padding: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  background-color: blanchedalmond;
+  color: lightslategrey;
+  font-size: 1.6rem;
+  box-shadow: 0.5rem 0.5rem 2rem gray;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .btn__controles:hover {
+  background-color: black;
+  color: blanchedalmond;
+  box-shadow: 0.5rem 0.5rem 2rem blanchedalmond;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .btn__controles:active {
+  transform: scale(0.9);
+}
+.formulario-registrar .registrar__formulario .controles__registrar .label__controles {
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .btn__controles-login {
+  background-color: rgba(61, 174, 48, 0.568);
+  color: black;
+  text-decoration: none;
+}
+.formulario-registrar .registrar__formulario .controles__registrar .btn__controles-login:hover {
+  background-color: whitesmoke;
+  color: rgba(61, 174, 48, 0.568);
+  box-shadow: 0.5rem 0.5rem 2rem black;
+}
+@media (max-width: 768px) {
+  .formulario-registrar {
+    top: 1vh;
+    margin: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

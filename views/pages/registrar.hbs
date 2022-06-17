@@ -1,0 +1,22 @@
+<form method="post" action="/api/usuario/alta" class="formulario-registrar">
+    <section class="registrar__formulario">
+        <h2 class="titulo__registrar">Registrate</h2>
+        <div class="controles__registrar">
+            <img src="/assets/images/registrar.png" alt="registrar" class="img__controles">
+            <input class="input__controles" type="text" name="nombre" placeholder="Nombre" required>
+            <input class="input__controles"  type="text" name="apellido" placeholder="Apellido" required>
+            <div class="input__fechaNacimiento">
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input class="input__controles"  type="date" name="fechaNacimiento" placeholder="Fecha de Nacimiento" required id="fecha-nacimiento">
+            </div>
+
+            <input class="input__controles"  type="email" name="email" placeholder="Email" required>
+            <input class="input__controles"  type="password" name="password" placeholder="Password">
+            <button class="btn__controles" type="submit">Registrate</button>
+            <label class="label__controles"> Ya tienes cuenta? <a href="/api/usuario/login" class="btn__controles btn__controles-login">Incia Sesion</a></label>
+        </div>
+        <span class="error__registrar">{{error}}</span> 
+    </section>
+
+
+</form>

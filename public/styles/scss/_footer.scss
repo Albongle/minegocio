@@ -1,0 +1,15 @@
+.footer{
+    position:sticky;
+    top:100vh;
+    background-color: $color_Principal;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .titulo__footer{
+        margin: .5rem;
+        padding: 1rem 2rem;
+    }
+}

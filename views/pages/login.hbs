@@ -1,0 +1,14 @@
+<form method="post" action="/api/usuario/login" class="formulario-login">
+    <section class="login__formulario">
+            <h2 class="titulo__login">Bienvenido</h2>
+            <div class="controles__login">       
+                <img class="img__controles" src="/assets/images/login.png" alt="login">
+                <input type="email" class="email__controles" name="username" placeholder="Email" required autofocus="" />
+                <input type="password" class="password__controles" name="password" required placeholder="Password"/>
+                <button class="btn__controles" type="submit">Login</button>
+                <label class="label__controles"> Aun no tienes cuenta? <a href="/api/usuario/alta" class="btn__controles btn__controles-alta">Registrate</a></label>
+            </div>  
+            <span class="error__login">{{error}}</span>        
+        </section>
+    </div>
+</form>

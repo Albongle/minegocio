@@ -1,0 +1,86 @@
+.formulario-login{
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    .login__formulario{
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: .5rem .5rem 2rem $color_Principal;
+        border-radius: 2rem;
+        .titulo__login{
+            margin: 1rem;
+            font-size: 5rem;
+           
+
+        }
+        .controles__login{
+            display: flex;
+            flex-direction: column;
+            margin: 1rem;
+            padding: 1rem;
+            .img__controles{
+                width: 40%;
+                align-self: center;
+                margin: 1rem;
+                @media (max-width:768px) {
+                    width: 70%;
+                }
+            }
+            .email__controles, .password__controles{
+                align-self: center;
+                width: 70%;
+                margin: 1rem;
+                padding: 1rem;
+                border-radius: 1rem;
+                border: 0;
+                box-shadow: .1rem .1rem 1rem $color_Secundario;
+                &:focus{
+                    box-shadow: .5rem .5rem 5rem $color_Principal;
+                }
+
+            }
+            .btn__controles{
+                cursor: pointer;
+                margin: 1rem;
+                padding: 1rem;
+                border: 0;
+                border-radius: 1rem;
+                background-color: $color_Principal;
+                color:$color_Texto_Boton;
+                font-size: 1.6rem;
+                box-shadow: .5rem .5rem 2rem $color_Btn_Sombra;
+                &:hover{
+                    background-color: $color_Secundario;
+                    color: $color_Principal;
+                    box-shadow: .5rem .5rem 2rem $color_Principal;
+                }
+                &:active{
+                    transform: scale(.9);
+                }
+            }
+            .label__controles{
+                margin: 1rem;
+                font-size: 1.6rem;
+            }
+            .btn__controles-alta{
+
+                background-color: $color_Btn_Alta;
+                color: $color_Secundario;
+                text-decoration: none;
+                &:hover{
+                    background-color: whitesmoke;
+                    color: $color_Btn_Alta;
+                    box-shadow: .5rem .5rem 2rem $color_Secundario;
+                }
+            }
+        }
+    }
+    @media (max-width:768px) {
+        top: 1vh;
+        margin: 1rem;
+    }
+}

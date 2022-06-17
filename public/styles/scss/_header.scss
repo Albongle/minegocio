@@ -1,0 +1,96 @@
+.header{
+    background-color:$color_Principal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    align-items: center;
+    @media(max-width:768px) {
+        justify-content: flex-start;
+    }
+
+    .logo__header{
+        @media(max-width:768px) {
+            display: none;
+        }
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;      
+          
+        .img__logo{
+            margin: 1rem;
+            width: 3rem;
+        }
+        .titulo__logo{
+            text-align: center;
+            margin: 1rem;
+        }
+    }
+    .nav__header{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        .img__nav{
+
+            display: none;
+            width: 3rem;
+            align-self: center;
+            &:hover{
+                transform: scale(1.3);
+                transition-duration: 1s;
+            }
+            
+            @media(max-width:768px) {
+                margin: .5rem 0rem .5rem 2rem;
+                display: flex;
+                align-self: flex-start
+            }
+        }
+
+        &:hover .lista__nav{
+            display: flex;
+        }
+        
+        .lista__nav{
+            font-size: 2rem;
+            margin: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            text-align: center;
+            @media(max-width:768px) {
+                display: none;
+                margin-left: 0;
+                flex-direction:column;
+                align-content: center;
+                margin-top: 0;
+                text-align: left;
+            }
+
+            .item__lista{
+                position: relative;
+                list-style: none;
+                margin: .5rem;
+                padding: 1rem 2rem;
+     
+                &:hover{
+                    background-color:$color_Secundario;
+                    cursor: pointer;
+                    border-radius: 1rem;
+                }
+                &:hover .enlace__item{
+                    color: $color_Principal;
+                }
+                .enlace__item{
+                    
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+}
