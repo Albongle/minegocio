@@ -1,11 +1,13 @@
 .formulario-registrar{
     position: relative;
-    top: 10vh;
+    top: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
     .registrar__formulario{
+        margin: 1rem;
+        padding: 1rem;
         width: 50rem;
         display: flex;
         flex-direction: column;
@@ -14,8 +16,6 @@
         .titulo__registrar{
             margin: 1rem;
             font-size: 5rem;
-           
-
         }
         .controles__registrar{
             display: flex;
@@ -44,6 +44,8 @@
                 }
             }
             .input__fechaNacimiento{
+                margin: 1rem;
+                padding: 1rem;
                 width: 80%;
                 display: flex;
                 flex-direction: row;
@@ -89,9 +91,24 @@
             }
         }
 
+        .error__registrar{
+            padding: 1rem;
+            font-size: 1.6rem;
+            background-color: $color_Alerta;
+            border-radius: 5rem;
+            color: whitesmoke;
+            animation-name: alerta;
+            animation-duration:.9s;
+            animation-delay: .1s;
+            animation-iteration-count:infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in; 
+        }
+
     }
     @media (max-width:768px) {
-        top: 1vh;
+        top: 0.1vh;
         margin: 1rem;
     }
 }
+

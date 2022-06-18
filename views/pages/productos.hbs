@@ -1,8 +1,22 @@
-<h1>Productos</h1>
+<section class="productos">
+    <h1 class="titulos__productos">Productos</h1>
+    <section class="productos__productos">
+        {{#each productos}}
+            <article class="articulo__productos" id="{{id}}">
+                <h2 class="titulo__articulo"><span>{{nombre}}</span></h2>
+                <img class="img__articulo" src="{{urlImg}}" alt="imagen-producto">
+                <div class="detalle detalle__articulo">
+                    <p class="detalle marca__detalle">{{marca}} - {{nombre}}</p>
+                    <p class="detalle precio__detalle"><span>{{precio}}</span></p>
+                    <p class="detalle cuotas__detalle">Hasta {{cuotas}} cuotas sin interes</p>
+                    <p class="detalle descripcion__detalle">{{desc}}</p>
+                </div>
+                <input class="btn__articulo" id="btn-comprar" type="button" value="Comprar">
+            </article>
+        {{/each}}
+    </section>
+</section>
 
-<ul>
-    {{#each productos}}
-        <li><img src="{{urlImg}}" alt="imagen"></li>
-    {{/each}}
-</ul>
+
+
 

@@ -1,4 +1,4 @@
-<form method="post" action="/api/usuario/alta" class="formulario-registrar">
+<form method="post" action="/api/usuario/alta" class="formulario-registrar animate__animated animate__fadeIn">
     <section class="registrar__formulario">
         <h2 class="titulo__registrar">Registrate</h2>
         <div class="controles__registrar">
@@ -13,9 +13,9 @@
             <input class="input__controles"  type="email" name="email" placeholder="Email" required>
             <input class="input__controles"  type="password" name="password" placeholder="Password">
             <button class="btn__controles" type="submit">Registrate</button>
-            <label class="label__controles"> Ya tienes cuenta? <a href="/api/usuario/login" class="btn__controles btn__controles-login">Incia Sesion</a></label>
+            <label class="label__controles"> Ya tienes cuenta? <a href="/api/test/usuario/login" class="btn__controles btn__controles-login">Incia Sesion</a></label>
         </div>
-        <span class="error__registrar">{{error}}</span> 
+        <span class="error__registrar block">{{error}}</span> 
     </section>
 
 

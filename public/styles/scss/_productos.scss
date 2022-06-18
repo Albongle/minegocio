@@ -1,0 +1,87 @@
+.productos{
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    .productos__productos{
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width:880px) {
+            justify-content: center;
+            margin: 1rem;
+            padding: 1rem;    
+        }
+        .articulo__productos{
+            background-color: $color_Articulo;
+            width: 40rem;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin: 1rem;
+            @media (max-width:768px) {
+                width: 80vw;
+            }
+            .titulo__articulo{
+                margin: .5rem;
+            }
+            .img__articulo{
+                border-radius: .5rem;
+                margin: .5rem;
+            }
+            &:hover{
+                box-shadow: .5rem .5rem 2rem $color_Principal;
+                transform: scale(1.01);
+                transition-delay: .1s;
+                transition-duration: .5s;
+                transition-timing-function: ease-in;
+            }
+            &:hover .titulo__articulo>span{
+
+                border-bottom: .2rem solid $color_Cuotas;
+                transition-delay: .1s;
+                transition-duration: .5s;
+                transition-timing-function: ease-in;
+            }
+            .detalle{
+                margin: 1rem;
+                padding: 1rem;
+
+            }
+            .detalle__articulo{
+                .descripcion__detalle{
+                    text-justify:newspaper;
+                    text-align: justify;
+                }
+                .cuotas__detalle{
+                    background-color: $color_Cuotas;
+                    color: white;
+                    border-radius: 2rem;
+                }
+                .precio__detalle>span{
+                    border-bottom: .2rem solid green;
+                }
+            }
+            .btn__articulo{
+                padding: 1rem;
+                font-size: 1.6rem;
+                background-color: $color_Principal;
+                border: 0;
+                border-radius: 1rem;
+                &:hover{
+                    cursor: pointer;
+                    background-color:$color_Btn_Alta;
+                    color:whitesmoke ;
+                    box-shadow: .5rem .5rem 2rem $color_Secundario;
+                }
+            }
+        }
+    }
+}
